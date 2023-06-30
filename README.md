@@ -1,4 +1,4 @@
-# BearingRUL-Estimation-Pseucodoce
+# BearingRUL-Estimation-Pseudocode
 Project Overview:
 Gearbox bearing are continuously exposed to challenging working conditions and therefore various maintenance strategies have been introduced over time to improve their operational efficiency. The project introduces a machine learning-based method for calculating the RUL of railway gearbox bearings. The method uses unlabeled mechanical vibration signals from gearbox bearings to detect patterns of increased bearing wear and predict the component's remaining useful life. It combines a data smoothing method, a change point algorithm to set thresholds, and regression models for prediction.
 
