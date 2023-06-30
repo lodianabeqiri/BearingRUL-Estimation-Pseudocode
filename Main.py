@@ -1,0 +1,45 @@
+This class includes the pseudocode used to run the RUL algorithm.
+Steps
+1: Load the data
+2. Prepare the data
+3. Remove outliers with One Class SVM and Interpolation.
+4. Obtain the signal to be examined.
+5. Use the Thresholds provided by the Change point algorithm, which was trained on a training set of damaged gearboxes, to detect state.
+7. Determine whether the signal is healthy or not, and whether RUL must be calculated.
+8. Calculate RUL to see how much time is left after the signal has entered the deterioration phase.
+'''
+
+
+function main(filename = 'data', column = 'data['column']', degradation = value, failure = value):
+
+    # 1: Load data
+    df = load_data_from_file(filename)
+
+    #  2: Perform preprocessing on the df
+    preprocess_data(df)
+
+    # 3: Remove outliers from the dataframe with one class SVM
+    remove_outliers(df)
+
+    # 4: Select the specified column from the dataframe
+    selected_col = select_col(df, column)
+
+    # 5: Filter the selected signal (function in preprocessing file)
+    filtered_signal = apply_savgol_filter(selected_column, window_size=51, order=3)
+
+    # 6: Detect the state of the signal (degradation, healthy, or failure) (function in preprocessing file)
+    state = detect_signal_state(filtered_signal, deg_threshold=deg, fail_threshold=fail)
+
+    # 7: Check if the signal is in the degradation state
+    if state != 1:  # 1 indicates the degradation state
+        return
+
+    # 8: Calculate the RUL (function in RULPseudocode file)
+    predicted_RUL = calculate_predicted_RUL(hours, filtered_signal)
+    actual_RUL = calculate_actual_RUL(hours)
+    error = calculate_prediction_error(predicted_RUL, actual_RUL)
+
+    # 9: Plot the result of the RUL prediction
+    plot_RUL_prediction( filtered_signal, error)
+
+    return
