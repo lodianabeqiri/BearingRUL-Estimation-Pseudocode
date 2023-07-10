@@ -7,7 +7,7 @@ The course code in implemented in python, and but the pseudocode is not tied to 
 
 Organization of the Repository:
 The repository contains many text files containing pseudocode for the following functions: Change-Point-algorithm, Main, Outliers-Removal, Polynomial-function, Preprocessing-function, and RUL-Calculation.
-The main function calculates the remaining useful life for provided gearbox data and makes use of all other functions such as preprocessing to preprocess the data and outliers-removal to find and handle outliers using one-class SVM. It uses the Change point technique to construct thresholds to identify if the signals provided are in a healthy state, and then it trains the polynomial regression on the data and estimates the remaining useful life using the RUL-Calculations routines. Each file is accompanied by remarks about the file's functionality. 
+The main function calculates the RUL for provided gearbox data and makes use of all other functions such as preprocessing to preprocess the data and outliers-removal to find and handle outliers using one-class SVM. It uses the Change Point Technique to construct thresholds to identify if the signals provided are in a healthy state, and then it trains the Polynomial Regression on the data and estimates the RUL. Each file is accompanied by comments about the file's functionality. 
 
 Project Requirements and Setup Instructions:
 It is important to import the libraries required to implement and run the code inspired by the pseudocode.
