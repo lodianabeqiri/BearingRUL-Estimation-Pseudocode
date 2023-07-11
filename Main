@@ -32,7 +32,7 @@ function main(filename = 'data', column = 'data['column']', degradation = value,
 
     # 7: Check if the signal is in the degradation state
     if state != 1:  # 1 indicates the degradation state
-        return
+        return #this return statement will only execute if "state" is not equal to 1. If "state" is equal to 1, the code will execute without reaching the return statement.
 
     # 8: Calculate the RUL (function in RULPseudocode file)
     predicted_RUL = calculate_predicted_RUL(hours, filtered_signal)
